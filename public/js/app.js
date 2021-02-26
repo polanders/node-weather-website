@@ -14,7 +14,7 @@ const fetchWeather = (address) => {
   
   console.log(`fetchWeather: ${address}`);
   
-  return fetch(`http://localhost:3000/weather?address=${address}`).then(res => {
+  return fetch(`/weather?address=${address}`).then(res => {
     return res.json();
   });
 };
