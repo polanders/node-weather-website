@@ -41,6 +41,10 @@ h1 {
   width: 400px;
 }
 
+#wimg-1 {
+  padding-top: 16px;
+}
+
 input {
   border: 1px solid #cccccc;
   padding: 8px;

@@ -15,6 +15,7 @@ const forecast = (latitude, longitude, callback) => {
             const { current } = body;
             callback(undefined, {
                 forecast: `It is currently ${current.temperature} degress out. There is a ${current.precip}% chance of rain.`,
+                icon: current.weather_icons[0],
             });
         }
     })

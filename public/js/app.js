@@ -23,21 +23,24 @@ const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const messageOne = document.querySelector('#wm-1');
 const messageTwo = document.querySelector('#wm-2');
+const imgOne = document.querySelector('#wimg-1');
 
 weatherForm.addEventListener('submit', e => {
   e.preventDefault();
 
   messageOne.textContent = 'Loading...';
   messageTwo.textContent = '';
+  imgOne.src = '';
 
-  fetchWeather(search.value).then(({ error, forecast, location, address } = {}) => {
+  fetchWeather(search.value).then(({ error, forecast, location, icon } = {}) => {
     if (error) {
       // console.log(error);
       messageOne.textContent = error;
       return;
     }
-    // console.log(`${location}: ${forecast}`);
+    console.log(`${icon}`);
 
+    imgOne.src = icon;
     messageOne.textContent = location;
     messageTwo.textContent = forecast;
   });
