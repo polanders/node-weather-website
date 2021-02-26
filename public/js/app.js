@@ -1,19 +1,4 @@
-console.log('executing js file');
-
-// fetch('http://localhost:3000/weather?address=boston').then(res => {
-//   return res.json();
-// }).then(({ error, forecast, location, address } = {}) => {
-  // if (error) {
-  //   console.log(error);
-  //   return;
-  // }
-  // console.log(`${location}: ${forecast}`);
-// });
-
 const fetchWeather = (address) => {
-  
-  console.log(`fetchWeather: ${address}`);
-  
   return fetch(`/weather?address=${address}`).then(res => {
     return res.json();
   });
@@ -34,12 +19,9 @@ weatherForm.addEventListener('submit', e => {
 
   fetchWeather(search.value).then(({ error, forecast, location, icon } = {}) => {
     if (error) {
-      // console.log(error);
       messageOne.textContent = error;
       return;
     }
-    console.log(`${icon}`);
-
     imgOne.src = icon;
     messageOne.textContent = location;
     messageTwo.textContent = forecast;
