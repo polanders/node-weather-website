@@ -42,7 +42,8 @@ h1 {
 }
 
 #wimg-1 {
-  padding-top: 16px;
+  margin-top: 16px;
+  border-radius: 16%;
 }
 
 input {
