@@ -31,14 +31,14 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About',
-    name: 'the name',
+    name: 'An exercise in using node and express.',
   });
 });
 
 app.get('/help', (req, res) => {
   res.render('help', {
     title: 'Help',
-    name: 'the name',
+    text: 'An exercise in using node and express.',
   });
 });
 
